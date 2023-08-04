@@ -16,6 +16,16 @@
             <x-btn.reset>Cancel</x-btn.reset>
 
         </x-form>
+
+        <hr class="my-4 border-dashed boder-gray-700">
+        
+        <div class="mb-1 uppercase dark:text-gray-300 ">List of Questions</div>
+
+        <div class="space-y-3 dark:text-gray-400">
+            @foreach ($questions as $item)
+                <x-question :question="$item" />
+            @endforeach
+        </div>
         
     </x-container>
 
